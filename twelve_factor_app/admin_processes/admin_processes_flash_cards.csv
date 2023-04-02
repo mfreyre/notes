@@ -1,0 +1,26 @@
+Question, Answer
+Concept: Process Formation
+Definition: The array of processes used to handle the app's regular business, such as handling web requests
+Example: Web processes, worker processes, background processes
+Importance: Ensures efficient and effective handling of app tasks and requests
+
+Concept: One-Off Administrative Tasks
+Definition: Maintenance tasks performed separately from regular business processes, such as database migrations or running one-time scripts
+Importance: Ensures app performance and functionality are maintained over time
+
+Concept: Running One-Off Tasks
+Definition: Running administrative tasks in an identical environment as regular long-running processes
+Importance: Avoids synchronization issues and ensures smooth execution of tasks
+
+Concept: Dependency Isolation
+Definition: Using the same dependency isolation techniques on all process types
+Importance: Ensures consistency in the app's behavior and performance across all processes
+
+Concept: REPL Shell
+Definition: A console for running arbitrary code or inspecting app models against the live database
+Example: Python's interpreter or Ruby's irb console
+Importance: Facilitates easy execution of one-off administrative tasks
+
+Concept: Local and Production Deployment
+Definition: Running one-off admin processes in a direct shell command for local deployment, and using remote command execution mechanism for production deployment
+Importance: Allows developers to run one-off tasks in different deployment environments with ease
