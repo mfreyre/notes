@@ -1,0 +1,7 @@
+Question, Answer
+"What is the importance of maximizing robustness with fast startup and graceful shutdown in the twelve-factor app?"
+"The twelve-factor app's processes are disposable, and processes should minimize startup time to allow fast elastic scaling and rapid deployment of code or config changes. Processes should shut down gracefully when they receive a SIGTERM signal from the process manager to ensure robustness of production deploys."
+"How can processes achieve graceful shutdown in a twelve-factor app?"
+"For web processes, graceful shutdown is achieved by ceasing to listen on the service port, allowing any current requests to finish, and then exiting. For worker processes, graceful shutdown is achieved by returning the current job to the work queue."
+"How should processes be robust against sudden death in the twelve-factor app?"
+"Processes should use a robust queueing backend, such as Beanstalkd, that returns jobs to the queue when clients disconnect or time out, and be architected to handle unexpected, non-graceful terminations. Crash-only design takes this concept to its logical conclusion."

@@ -1,3 +1,4 @@
+Question, Answer
 "What is the process model in the twelve-factor app?",
 "Processes in the twelve-factor app take strong cues from the unix process model for running service daemons. The developer can architect their app to handle diverse workloads by assigning each type of work to a process type, and the share-nothing, horizontally partitionable nature of twelve-factor app processes means that adding more concurrency is a simple and reliable operation.",
 "What is workload diversity in the twelve-factor app?",
