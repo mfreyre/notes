@@ -1,0 +1,8 @@
+"What is the process model in the twelve-factor app?",
+"Processes in the twelve-factor app take strong cues from the unix process model for running service daemons. The developer can architect their app to handle diverse workloads by assigning each type of work to a process type, and the share-nothing, horizontally partitionable nature of twelve-factor app processes means that adding more concurrency is a simple and reliable operation.",
+"What is workload diversity in the twelve-factor app?",
+"Workload diversity is expressed as process types. HTTP requests may be handled by a web process, and long-running background tasks handled by a worker process.",
+"What is the process formation in the twelve-factor app?",
+"The array of process types and number of processes of each type is known as the process formation.",
+"Should twelve-factor app processes daemonize or write PID files?",
+"No, twelve-factor app processes should never daemonize or write PID files. Instead, rely on the operating system’s process manager (such as systemd, a distributed process manager on a cloud platform, or a tool like Foreman in development) to manage output streams, respond to crashed processes, and handle user-initiated restarts and shutdowns.",

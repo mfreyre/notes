@@ -1,0 +1,7 @@
+"Question","Answer"
+"What are twelve-factor processes?" ,"Twelve-factor processes are stateless and share-nothing. Any data that needs to persist must be stored in a stateful backing service, typically a database."
+"What is the use of the memory space or filesystem in a twelve-factor process?" ,"The memory space or filesystem of the process can be used as a brief, single-transaction cache. For example, downloading a large file, operating on it, and storing the results of the operation in the database."
+"Why does the twelve-factor app never assume that anything cached in memory or on disk will be available on a future request or job?" ,"With many processes of each type running, chances are high that a future request will be served by a different process. Even when running only one process, a restart will usually wipe out all local (e.g., memory and filesystem) state."
+"What is the preferred method for compiling assets in a twelve-factor app?" ,"A twelve-factor app prefers to do this compiling during the build stage. Asset packagers such as Jammit and the Rails asset pipeline can be configured to package assets during the build stage."
+"What is a good candidate for a datastore that offers time-expiration in a twelve-factor app?" ,"Session state data is a good candidate for a datastore that offers time-expiration, such as Memcached or Redis."
+"What is a violation of twelve-factor regarding user session data?" ,"Sticky sessions are a violation of twelve-factor and should never be used or relied upon."

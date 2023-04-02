@@ -1,0 +1,9 @@
+Question,Answer
+"What are the three stages that a codebase goes through to become a deploy in a twelve-factor app?","The build stage, the release stage, and the run stage."
+"What is the purpose of the build stage in a twelve-factor app?","To transform a code repo into an executable bundle known as a build, which fetches vendor dependencies and compiles binaries and assets."
+"What is the purpose of the release stage in a twelve-factor app?","To combine the build produced by the build stage with the deploy's current config, resulting in a release that is ready for immediate execution in the execution environment."
+"What is the purpose of the run stage in a twelve-factor app?","To run the app in the execution environment by launching some set of the app's processes against a selected release."
+"What is the relationship between code, build, release, and config in a twelve-factor app?","Code becomes a build, which is combined with config to create a release."
+"What is the recommended practice for separation between the build, release, and run stages in a twelve-factor app?","The twelve-factor app uses strict separation between the build, release, and run stages, with no way to make changes to the code at runtime, and the run stage kept to as few moving parts as possible to avoid breaking in the middle of the night when no developers are on hand."
+"What is an example of a unique release ID?","A timestamp of the release (such as 2011-04-06-20:32:17) or an incrementing number (such as v100)."
+"What is the purpose of a unique release ID?","To create an append-only ledger where a release cannot be mutated once it is created, and any change must create a new release."

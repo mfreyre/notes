@@ -1,0 +1,8 @@
+Question, Answer
+"What does a twelve-factor app use to export HTTP as a service?","Port binding"
+"What is the contract between a twelve-factor app and the execution environment for serving requests?","Binding to a port"
+"How does a developer access a service exported by their app in a local development environment?","By visiting a service URL like http://localhost:5000/"
+"What handles routing requests from a public-facing hostname to the port-bound web processes in deployment?","A routing layer"
+"What approach does the twelve-factor app use to create a web-facing service?","Binding to a port and listening to requests coming in on that port"
+"Can nearly any kind of server software be run via a process binding to a port and awaiting incoming requests?","Yes"
+"Can one app become the backing service for another app using the port-binding approach?","Yes, by providing the URL to the backing app as a resource handle in the config for the consuming app."
