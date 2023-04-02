@@ -1,0 +1,7 @@
+Question,Answer
+What is a twelve-factor app always tracked in?,A version control system such as Git, Mercurial, or Subversion.
+What is a codebase in a decentralized revision control system like Git?,Any set of repos who share a root commit.
+What is the correlation between the codebase and the app in a twelve-factor app?,There is always a one-to-one correlation between the codebase and the app, and there is only one codebase per app.
+What is the solution for multiple apps sharing the same code in a twelve-factor app?,Factor shared code into libraries which can be included through the dependency manager.
+What is a deploy in a twelve-factor app?,A running instance of the app, typically a production site, one or more staging sites, or a developer's copy of the app running in their local development environment.
+What is the relationship between the codebase and deploys in a twelve-factor app?,The codebase is the same across all deploys, although different versions may be active in each deploy.

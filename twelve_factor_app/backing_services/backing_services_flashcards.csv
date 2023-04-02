@@ -1,0 +1,8 @@
+Question,Answer
+What is a backing service in a twelve-factor app?,Any service the app consumes over the network as part of its normal operation, such as datastores, messaging/queueing systems, SMTP services for outbound email, and caching systems.
+Who traditionally manages locally-managed services like the database?,The same systems administrators who deploy the app's runtime.
+What are examples of third-party services that an app may have?,SMTP services, metrics-gathering services, binary asset services, and API-accessible consumer services.
+What is the relationship between local and third-party services in a twelve-factor app?,Both are attached resources accessed via a URL or other locator/credentials stored in the config, and the code makes no distinction between them.
+Can local services be swapped with third-party services without any changes to the app's code?,Yes, a deploy of the twelve-factor app should be able to swap out a local service with one managed by a third party without any changes to the app's code, and only the resource handle in the config needs to change.
+What is a resource in a twelve-factor app?,Each distinct backing service, where a MySQL database is an example of a resource, and two MySQL databases used for sharding at the application layer qualify as two distinct resources.
+How does a twelve-factor app treat databases and other resources?,As attached resources with loose coupling to the deploy they are attached to, which allows resources to be attached to and detached from deploys at will without any code changes.
